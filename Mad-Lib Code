@@ -1,0 +1,72 @@
+package com.example.madlibhaloween;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import java.text.BreakIterator;
+
+public class MainActivity extends AppCompatActivity {
+
+
+    private final String Charactername;
+    private BreakIterator Txtfn;
+
+    public MainActivity(String charactername) {
+        Charactername = charactername;
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+    public void onClick (View v) {
+
+
+        Horror.Charactername = Txtfn.getText().toString();
+        System.out.println(Horror.Charactername);
+
+        EditText BabaDook = findViewById(R.id.BabaDook);
+        Horror.Death = BabaDook.getText().toString();
+        System.out.println(Horror.Death);
+
+        EditText ACT = findViewById(R.id.ACT);
+        Horror.Weapon = ACT.getText().toString();
+        System.out.println(Horror.Weapon);
+
+        EditText Survive = findViewById(R.id.txtNumber);
+        Horror.Survive = Survive.getText().toString();
+        System.out.println(Horror.Survive);
+
+        TextView textView = findViewById(R.id.setText);
+        textView.setText
+                (" The Scary Clown " + Horror.Charactername +
+                        " Told me to " + Horror.Weapon + " inside this old Haunted House " +
+                        " Inside I saw a Freaky looking " + Horror.Death + ". It scared me so bad i peed my pants and crapped it "
+                        + Horror.Survive + " !!!");
+
+        }
+
+    
+
+    {
+
+        
+        
+        
+        
+    }
+
+
+
+
+
+
+
+}
+
+
